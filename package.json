@@ -1,0 +1,92 @@
+{
+  "name": "adwokat-trzebnica-html-bootstrap",
+  "version": "1.0.0",
+  "description": "Professional website for Kancelaria Adwokacka Adwokat Katarzyna Maj - Law office specializing in family law, inheritance law, civil law, and criminal defense in Trzebnica, Poland",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "lint:js": "eslint \"src/**/*.js\" \"*.js\"",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:html": "htmlhint \"**/*.html\"",
+    "format": "prettier --write \"**/*.{js,css,html,md,json}\"",
+    "format:check": "prettier --check \"**/*.{js,css,html,md,json}\"",
+    "test": "npm run lint && npm run test:a11y",
+    "test:a11y": "pa11y-ci",
+    "lighthouse": "lhci autorun",
+    "prepare": "husky install",
+    "clean": "rm -rf dist node_modules",
+    "deploy": "npm run build && npm run deploy:prod",
+    "deploy:prod": "echo 'Configure your deployment target'",
+    "security:check": "npm audit && npm run security:secrets",
+    "security:secrets": "detect-secrets scan --baseline .secrets.baseline",
+    "precommit": "lint-staged",
+    "postinstall": "echo 'Setup complete. Run npm run dev to start development server.'"
+  },
+  "keywords": [
+    "law-office",
+    "lawyer-website",
+    "bootstrap",
+    "html",
+    "css",
+    "javascript",
+    "family-law",
+    "inheritance-law",
+    "trzebnica",
+    "legal-services",
+    "kancelaria-adwokacka",
+    "responsive-design",
+    "seo-optimized"
+  ],
+  "author": {
+    "name": "Kancelaria Adwokacka Adwokat Katarzyna Maj",
+    "email": "biuro@adwokat-trzebnica.com",
+    "url": "https://www.adwokat-trzebnica.com"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PB-MEDIA-Strony-Sklepy-Marketing/adwokat-trzebnica-html-bootstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PB-MEDIA-Strony-Sklepy-Marketing/adwokat-trzebnica-html-bootstrap/issues"
+  },
+  "homepage": "https://www.adwokat-trzebnica.com",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "@popperjs/core": "^2.11.8",
+    "@fortawesome/fontawesome-free": "^6.5.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.12",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.4",
+    "stylelint": "^16.2.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "htmlhint": "^1.1.4",
+    "pa11y-ci": "^3.1.0",
+    "@lhci/cli": "^0.13.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "postcss": "^8.4.33",
+    "autoprefixer": "^10.4.17",
+    "cssnano": "^6.0.3",
+    "detect-secrets": "^1.0.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "not IE 11"
+  ]
+}

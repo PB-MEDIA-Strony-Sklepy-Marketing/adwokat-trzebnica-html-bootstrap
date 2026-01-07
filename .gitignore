@@ -1,0 +1,111 @@
+# Dependencies
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+.vite/
+*.min.js
+*.min.css
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+.classpath
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+.pa11y-ci-cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+.cache/
+
+# Backup files
+*.bak
+*.backup
+*~
+*.swp
+
+# PHP
+vendor/
+composer.lock
+*.log
+.phpunit.result.cache
+
+# Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+build/
+.mvn/
+
+# Docker
+docker-compose.override.yml
+.docker/data/
+
+# Deployment
+.vercel
+.netlify
+.firebase/
+.serverless/
+
+# Security and secrets
+.secrets/
+*.pem
+*.key
+*.cert
+secrets.json
+
+# Analytics and monitoring
+.lighthouseci/
+
+# Misc
+.husky/_/
+.lint-staged-*
