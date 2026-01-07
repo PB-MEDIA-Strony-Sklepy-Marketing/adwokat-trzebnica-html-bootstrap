@@ -1,0 +1,19 @@
+title = "gitleaks config for Kancelaria Adwokacka"
+
+[[rules]]
+id = "generic-api-key"
+description = "Generic API Key"
+regex = '''(?i)(api[_-]?key|apikey)[\s]*[=:][\s]*['"]?[a-zA-Z0-9]{20,}['"]?'''
+tags = ["key", "API"]
+
+[[rules]]
+id = "email-credentials"
+description = "Email credentials"
+regex = '''(?i)(smtp[_-]?(password|pass))[\s]*[=:][\s]*['"]?[^\s'"]+['"]?'''
+tags = ["credentials", "email"]
+
+[allowlist]
+paths = [
+    '''.env.example''',
+    '''.env.local.example'''
+]

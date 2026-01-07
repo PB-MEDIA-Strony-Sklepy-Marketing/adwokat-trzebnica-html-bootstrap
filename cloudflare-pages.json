@@ -1,0 +1,11 @@
+{
+  "production": {
+    "command": "npm run build",
+    "directory": "dist",
+    "nodeVersion": "20"
+  },
+  "preview": {
+    "command": "npm run build",
+    "directory": "dist"
+  }
+}

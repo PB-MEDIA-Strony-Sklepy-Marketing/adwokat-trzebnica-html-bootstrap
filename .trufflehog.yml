@@ -1,0 +1,18 @@
+# TruffleHog configuration for secret scanning
+rules:
+  - id: api-key-detection
+    regex: '(?i)(api[_-]?key|apikey)[\s]*[=:][\s]*[''"]?[a-zA-Z0-9]{20,}[''"]?'
+    severity: high
+  
+  - id: private-key-detection
+    regex: '-----BEGIN (RSA|DSA|EC|OPENSSH) PRIVATE KEY-----'
+    severity: critical
+
+ignore:
+  paths:
+    - .env.example
+    - .env.local.example
+    - docs/
+  
+  commits:
+    - abc123  # Example commit to ignore

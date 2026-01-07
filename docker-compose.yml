@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+    restart: unless-stopped
+    networks:
+      - adwokat-network
+
+networks:
+  adwokat-network:
+    driver: bridge
