@@ -4,7 +4,7 @@
 (function() {
   const GA_ID = '[GOOGLE_ANALYTICS_ID]';
   
-  if (GA_ID && GA_ID !== '[GOOGLE_ANALYTICS_ID]') {
+  if (/^G-[A-Z0-9]+$/.test(GA_ID)) {
     // Load Google Analytics
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
