@@ -75,7 +75,7 @@
     "htmlhint": "^1.1.4",
     "pa11y-ci": "^3.1.0",
     "@lhci/cli": "^0.13.0",
-    "husky": "^8.0.3",
+    "husky": "^9.1.7",
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.33",
     "autoprefixer": "^10.4.17",
