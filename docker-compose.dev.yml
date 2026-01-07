@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   dev:
-    image: node:20-alpine
+    image: node:18-alpine
     working_dir: /app
     command: npm run dev
     ports:
