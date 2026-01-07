@@ -1,0 +1,66 @@
+# Automatic labeling for PRs based on changed files
+
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: 
+      - '**/*.md'
+      - 'docs/**/*'
+
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'package.json'
+      - 'package-lock.json'
+
+ci-cd:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.github/workflows/**'
+      - '.github/actions/**'
+
+html:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/*.html'
+      - 'src/**/*.html'
+
+css:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/*.css'
+      - '**/*.scss'
+
+javascript:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/*.js'
+      - 'src/**/*.js'
+
+configuration:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.*rc*'
+      - '**/*config.js'
+      - '.editorconfig'
+      - 'vite.config.js'
+
+testing:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/*.test.js'
+      - '**/*.spec.js'
+      - 'tests/**/*'
+
+accessibility:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.pa11yrc'
+      - '**/a11y/**'
+
+security:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.github/SECURITY.md'
+      - 'docs/SECURITY.md'
+      - '.gitleaks.toml'
+      - '.secrets.baseline'

@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build project
+        run: npm run build
+      
+      - name: Create Release Archive
+        run: |
+          cd dist
+          zip -r ../release-${{ github.ref_name }}.zip .
+          cd ..
+      
+      - name: Generate Changelog
+        id: changelog
+        uses: metcalfc/changelog-generator@v4.2.0
+        with:
+          myToken: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: release-${{ github.ref_name }}.zip
+          body: ${{ steps.changelog.outputs.changelog }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

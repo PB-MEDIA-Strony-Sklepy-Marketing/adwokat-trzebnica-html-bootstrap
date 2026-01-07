@@ -1,0 +1,39 @@
+# Code ownership for automated review requests
+# More info: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything
+*                           @piotroq
+
+# Documentation
+*.md                        @piotroq
+docs/                       @piotroq
+
+# CI/CD and workflows
+.github/                    @piotroq
+.github/workflows/          @piotroq
+
+# Configuration files
+.*rc                        @piotroq
+*config.js                  @piotroq
+package.json                @piotroq
+
+# Security and legal
+.github/SECURITY.md         @piotroq
+LICENSE                     @piotroq
+docs/RODO.md                @piotroq
+docs/LEGAL.md               @piotroq
+
+# AI configuration
+.cursorrules                @piotroq
+.windsurfrules              @piotroq
+AGENTS.md                   @piotroq
+docs/AI_GUIDES/             @piotroq
+
+# Source code
+src/                        @piotroq
+scripts/                    @piotroq
+
+# Deployment
+vercel.json                 @piotroq
+netlify.toml                @piotroq
+Dockerfile                  @piotroq
