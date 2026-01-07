@@ -1,0 +1,205 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for the website
+title: "[FEATURE] "
+labels: ["enhancement", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature! Please fill out the form below to help us understand your idea.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: This feature would benefit the law office and its clients
+          required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Feature Category
+      description: What category does this feature belong to?
+      options:
+        - User Interface/Design
+        - Functionality/Behavior
+        - Content/Information
+        - Performance
+        - Accessibility
+        - SEO
+        - Security/RODO
+        - Analytics/Tracking
+        - Forms/Contact
+        - Navigation
+        - Mobile Experience
+        - Integration
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature?
+      options:
+        - Critical (Essential for business)
+        - High (Very beneficial)
+        - Medium (Nice to have)
+        - Low (Minor improvement)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve?
+      placeholder: Currently, users cannot... / There is no way to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your proposed solution in detail
+      placeholder: I would like to see... / The website should...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Have you considered any alternative solutions or features?
+      placeholder: Another approach could be...
+    validations:
+      required: false
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: How will this feature benefit the law office and its clients?
+      placeholder: |
+        - Benefit 1
+        - Benefit 2
+        - Benefit 3
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: target-audience
+    attributes:
+      label: Target Audience
+      description: Who will benefit from this feature?
+      options:
+        - label: Potential clients visiting the website
+        - label: Existing clients
+        - label: Mobile users
+        - label: Desktop users
+        - label: Users with disabilities
+        - label: Search engines (SEO)
+        - label: Law office staff
+        - label: Content managers
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated Effort
+      description: How complex do you think this feature is to implement?
+      options:
+        - Small (Few hours)
+        - Medium (Few days)
+        - Large (Week or more)
+        - Extra Large (Multiple weeks)
+        - Unknown
+    validations:
+      required: false
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples
+      description: Are there examples of this feature on other websites?
+      placeholder: Include URLs or descriptions of similar implementations
+    validations:
+      required: false
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups/Wireframes
+      description: If applicable, add mockups, wireframes, or screenshots
+      placeholder: Drag and drop images here or paste URLs
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical-details
+    attributes:
+      label: Technical Details
+      description: Any technical considerations or requirements?
+      placeholder: |
+        - This would require integration with...
+        - This should use...
+        - This needs to consider...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: compliance
+    attributes:
+      label: Compliance Considerations
+      description: Does this feature need to consider any compliance requirements?
+      options:
+        - label: RODO/GDPR compliance required
+        - label: Accessibility standards (WCAG 2.1)
+        - label: Legal profession standards
+        - label: Mobile-first design
+        - label: Browser compatibility
+        - label: Performance standards
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria
+      description: How will we know this feature is successful?
+      placeholder: |
+        - Metric 1
+        - Metric 2
+        - User feedback
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the feature request here
+      placeholder: Any additional information that might be helpful...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: volunteer
+    attributes:
+      label: Implementation
+      description: Are you willing to help implement this feature?
+      options:
+        - label: I am willing to contribute to the implementation
+        - label: I can provide design/mockups
+        - label: I can help with testing
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        Thank you for your feature suggestion! We will review it and consider it for future development.
