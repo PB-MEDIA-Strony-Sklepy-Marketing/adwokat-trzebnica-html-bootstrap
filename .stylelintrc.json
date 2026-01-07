@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier"
+  ],
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "single",
+    "no-duplicate-selectors": true,
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "selector-pseudo-element-colon-notation": "double",
+    "selector-pseudo-class-parentheses-space-inside": "never",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-space-after": "always",
+    "declaration-colon-space-before": "never",
+    "block-opening-brace-space-before": "always",
+    "selector-attribute-brackets-space-inside": "never",
+    "selector-attribute-operator-space-after": "never",
+    "selector-attribute-operator-space-before": "never",
+    "selector-combinator-space-after": "always",
+    "selector-combinator-space-before": "always",
+    "selector-descendant-combinator-no-non-space": true,
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9_-]+$",
+    "max-nesting-depth": 3,
+    "no-unknown-animations": true,
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
+    }]
+  },
+  "ignoreFiles": [
+    "node_modules/**/*",
+    "dist/**/*",
+    "build/**/*",
+    "**/*.min.css"
+  ]
+}

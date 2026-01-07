@@ -1,0 +1,24 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": [
+      "axe",
+      "htmlcs"
+    ],
+    "ignore": [],
+    "timeout": 30000,
+    "wait": 1000,
+    "chromeLaunchConfig": {
+      "args": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox"
+      ]
+    }
+  },
+  "urls": [
+    "http://localhost:5173",
+    "http://localhost:5173/o-mnie.html",
+    "http://localhost:5173/uslugi.html",
+    "http://localhost:5173/kontakt.html"
+  ]
+}
