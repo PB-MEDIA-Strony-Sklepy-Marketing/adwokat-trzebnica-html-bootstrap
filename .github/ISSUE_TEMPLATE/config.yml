@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Documentation
+    url: https://github.com/PB-MEDIA-Strony-Sklepy-Marketing/adwokat-trzebnica-html-bootstrap/blob/main/README.md
+    about: Check the documentation for answers to common questions
+  
+  - name: 💬 Questions & Support
+    url: https://github.com/PB-MEDIA-Strony-Sklepy-Marketing/adwokat-trzebnica-html-bootstrap/discussions
+    about: Ask questions and get help from the community
+  
+  - name: 🔒 Security Issues
+    url: https://github.com/PB-MEDIA-Strony-Sklepy-Marketing/adwokat-trzebnica-html-bootstrap/security/advisories/new
+    about: Report security vulnerabilities privately
+  
+  - name: 📧 Direct Contact
+    url: mailto:biuro@adwokat-trzebnica.com
+    about: Contact the law office directly for business inquiries
