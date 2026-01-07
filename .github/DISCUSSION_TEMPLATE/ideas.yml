@@ -1,0 +1,15 @@
+labels: [ideas, enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Ideas and Suggestions
+        Share your ideas for improving the website.
+  
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your Idea
+      description: Describe your idea or suggestion.
+    validations:
+      required: true

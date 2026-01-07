@@ -1,0 +1,9 @@
+# robots.txt for adwokat-trzebnica.com
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.env
+Disallow: /api/
+
+Sitemap: https://www.adwokat-trzebnica.com/sitemap.xml

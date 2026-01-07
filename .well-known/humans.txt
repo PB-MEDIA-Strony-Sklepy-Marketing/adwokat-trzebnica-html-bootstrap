@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: Development Team
+Contact: biuro [at] adwokat-trzebnica.com
+Location: Trzebnica, Poland
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript
+Components: Bootstrap 5, Font Awesome 6
+Software: Vite, Node.js
