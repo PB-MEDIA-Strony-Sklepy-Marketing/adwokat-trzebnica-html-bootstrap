@@ -1,0 +1,120 @@
+# Cursor AI Rules for Kancelaria Adwokacka Website
+
+## Project Context
+You are working on a professional law office website for Kancelaria Adwokacka Adwokat Katarzyna Maj in Trzebnica, Poland. This is a Bootstrap-based HTML/CSS/JavaScript project (NO TypeScript, NO React).
+
+## Technology Stack
+- HTML5, CSS3, JavaScript ES6+
+- Bootstrap 5.3.2
+- Font Awesome 6.5.1  
+- Vite 5.0 (build tool)
+- PHP/Java backend (for forms)
+
+## Critical Requirements
+1. **RODO/GDPR Compliance**: All data collection must be GDPR-compliant
+2. **Accessibility**: WCAG 2.1 Level AA required
+3. **Professional Tone**: Formal Polish language for legal context
+4. **SEO**: Optimize for local legal services ("adwokat Trzebnica")
+5. **Mobile-First**: Responsive design is mandatory
+
+## Coding Standards
+
+### HTML
+- Use semantic HTML5 elements
+- Include alt text for all images
+- Maintain proper heading hierarchy (H1→H2→H3)
+- Add ARIA labels for accessibility
+- Validate with HTMLHint
+
+### CSS
+- Mobile-first approach
+- BEM naming convention
+- Use Bootstrap utilities when possible
+- Avoid !important
+- Use CSS custom properties
+
+### JavaScript
+- ES6+ syntax (const/let, arrow functions, async/await)
+- No jQuery (use vanilla JS)
+- Proper error handling
+- Event delegation for performance
+- JSDoc comments for functions
+
+## File Structure
+```
+src/          # Source HTML templates
+docs/         # Documentation (including RODO, SEO guides)
+scripts/      # Utility scripts
+brand/        # Brand assets
+.prompts/     # AI context prompts
+```
+
+## RODO Compliance Checklist
+- [ ] Cookie consent banner
+- [ ] Privacy policy link
+- [ ] Data processing consent in forms
+- [ ] Secure data transmission (HTTPS)
+- [ ] Data minimization principle
+
+## SEO Keywords
+Focus on: "adwokat Trzebnica", "kancelaria prawna", "prawo rodzinne", "prawo spadkowe", "rozwód Trzebnica", "spadek Wrocław"
+
+## Accessibility Requirements
+- Keyboard navigation support
+- Focus indicators visible
+- Screen reader compatible
+- Color contrast WCAG AA
+- Alt text for images
+
+## Commands to Use
+```bash
+npm run dev          # Start development server
+npm run lint         # Run all linters
+npm run format       # Format code
+npm test             # Run tests including accessibility
+npm run build        # Production build
+```
+
+## Do NOT
+- Use TypeScript
+- Add React/Vue/Angular
+- Hardcode sensitive data (use placeholders: [KANCELARIA_EMAIL])
+- Ignore accessibility
+- Skip RODO compliance
+- Use informal language
+
+## Do ALWAYS
+- Test on multiple browsers
+- Check mobile responsiveness
+- Validate accessibility with screen reader
+- Use Bootstrap utilities
+- Write semantic HTML
+- Follow Polish legal terminology
+
+## Law Office Services
+- Prawo Rodzinne: divorces, alimony, parental authority
+- Prawo Spadkowe: wills, inheritance, estate divisions
+- Prawo Cywilne: contracts, payment claims
+- Obrona Karna: criminal defense, court representation
+
+## Contact Information Placeholders
+- Email: [KANCELARIA_EMAIL]
+- Phone: [KANCELARIA_PHONE]
+- Address: [KANCELARIA_ADDRESS]
+- NIP: [KANCELARIA_NIP]
+
+## Read First
+- AGENTS.md - Central AI guide
+- docs/RODO.md - GDPR compliance
+- docs/SEO.md - SEO strategy
+- CONTRIBUTING.md - Coding standards
+
+## Cursor-Specific Tips
+- Use Cmd/Ctrl+K for inline edits with context
+- Reference specific files when asking questions
+- Use "Edit this file" for surgical changes
+- Test in browser immediately after changes
+- Use built-in terminal for npm commands
+
+---
+**Remember**: This is a real law office serving real clients. Quality and professionalism are paramount.

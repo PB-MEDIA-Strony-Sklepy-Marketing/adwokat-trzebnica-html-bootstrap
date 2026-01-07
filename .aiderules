@@ -1,0 +1,56 @@
+# Aider AI Rules - Kancelaria Adwokacka Website
+
+## Project Overview
+Law office website: Bootstrap 5 + HTML + CSS + JavaScript (NO TypeScript/React)
+
+## Stack
+- Frontend: HTML5, CSS3, JavaScript ES6+
+- Framework: Bootstrap 5.3.2
+- Build: Vite 5.0
+- Icons: Font Awesome 6.5.1
+
+## Key Requirements
+1. **RODO Compliance**: Forms need data processing consent
+2. **Accessibility**: WCAG 2.1 AA (screen readers, keyboard navigation)
+3. **Responsive**: Mobile-first design
+4. **SEO**: Local legal services (Trzebnica region)
+5. **Polish**: Professional language for legal context
+
+## Coding Standards
+- HTML: Semantic elements, proper headings, alt text
+- CSS: Mobile-first, BEM naming, Bootstrap utilities
+- JS: ES6+ (const/let, arrow functions, async/await)
+
+## Form Template (RODO)
+```html
+<form>
+  <input type="email" required aria-label="Email">
+  <textarea required aria-label="Wiadomość"></textarea>
+  <input type="checkbox" required>
+  <label>Zgoda RODO na przetwarzanie danych</label>
+  <button type="submit">Wyślij</button>
+</form>
+```
+
+## Development
+```bash
+npm run dev      # Dev server
+npm run lint     # Check code
+npm run format   # Auto-format
+npm test         # Run tests
+```
+
+## Services
+- Prawo rodzinne (Family law)
+- Prawo spadkowe (Inheritance)
+- Prawo cywilne (Civil)
+- Obrona karna (Criminal defense)
+
+## SEO Keywords
+"adwokat Trzebnica", "kancelaria prawna", "rozwód", "spadek"
+
+## Reference
+AGENTS.md, docs/RODO.md, CONTRIBUTING.md
+
+---
+Professional law office - Quality and compliance are critical.

@@ -1,0 +1,238 @@
+# Windsurf AI Rules for Kancelaria Adwokacka Website
+
+## Project Identity
+Law office website for Adwokat Katarzyna Maj specializing in family law, inheritance law, civil law, and criminal defense in Trzebnica, Poland.
+
+## Tech Stack
+- Frontend: HTML5, CSS3, JavaScript (ES6+)
+- Framework: Bootstrap 5.3.2
+- Icons: Font Awesome 6.5.1
+- Build: Vite 5.0
+- Backend: PHP/Java
+- NO: TypeScript, React, Vue, Angular, Node.js backend
+
+## Core Principles
+1. RODO/GDPR Compliance First
+2. WCAG 2.1 Level AA Accessibility
+3. Mobile-First Responsive Design
+4. Professional Polish Language
+5. SEO for Local Legal Services
+
+## HTML Guidelines
+```html
+<!-- Semantic structure -->
+<header>
+  <nav aria-label="Main navigation">
+    <!-- Navigation -->
+  </nav>
+</header>
+<main>
+  <section aria-labelledby="services-heading">
+    <h2 id="services-heading">Usługi</h2>
+  </section>
+</main>
+<footer>
+  <!-- Footer content -->
+</footer>
+
+<!-- RODO-compliant form -->
+<form>
+  <input type="email" required aria-label="Email">
+  <input type="checkbox" required>
+  <label>Zgoda na przetwarzanie danych osobowych zgodnie z RODO</label>
+  <button type="submit">Wyślij</button>
+</form>
+```
+
+## CSS Guidelines
+```css
+/* Mobile-first approach */
+.services {
+  padding: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .services {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* BEM naming */
+.service-card {
+  background: var(--color-white);
+}
+
+.service-card__title {
+  font-size: var(--font-lg);
+}
+
+.service-card__description {
+  color: var(--color-text-secondary);
+}
+```
+
+## JavaScript Guidelines
+```javascript
+// ES6+ features
+const validateForm = (formData) => {
+  const errors = {};
+  
+  if (!formData.email) {
+    errors.email = 'Email jest wymagany';
+  }
+  
+  return {
+    isValid: Object.keys(errors).length === 0,
+    errors
+  };
+};
+
+// Async/await for API calls
+const submitForm = async (data) => {
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    return await response.json();
+  } catch (error) {
+    console.error('Form submission error:', error);
+    throw error;
+  }
+};
+```
+
+## RODO Requirements
+Every form MUST include:
+```html
+<div class="form-check">
+  <input 
+    type="checkbox" 
+    class="form-check-input" 
+    id="rodoConsent" 
+    required
+  >
+  <label class="form-check-label" for="rodoConsent">
+    Wyrażam zgodę na przetwarzanie moich danych osobowych przez 
+    Kancelarię Adwokacką Adwokat Katarzyna Maj w celu realizacji 
+    zapytania zgodnie z 
+    <a href="/polityka-prywatnosci">polityką prywatności</a>.
+  </label>
+</div>
+```
+
+## SEO Best Practices
+```html
+<!-- Meta tags for each page -->
+<head>
+  <title>Adwokat Trzebnica | Prawo Rodzinne i Spadkowe | Katarzyna Maj</title>
+  <meta name="description" content="Kancelaria adwokacka w Trzebnicy. Specjalizacja: prawo rodzinne, spadkowe, cywilne. Doświadczony adwokat - Katarzyna Maj.">
+  <meta name="keywords" content="adwokat Trzebnica, prawo rodzinne, rozwód, spadek, kancelaria prawna">
+  
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Attorney",
+    "name": "Kancelaria Adwokacka Adwokat Katarzyna Maj",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Daszyńskiego 67/4",
+      "addressLocality": "Trzebnica",
+      "postalCode": "55-100",
+      "addressCountry": "PL"
+    },
+    "telephone": "+48502319645"
+  }
+  </script>
+</head>
+```
+
+## Accessibility Checklist
+- [ ] All images have alt text
+- [ ] Form inputs have labels
+- [ ] Links have descriptive text
+- [ ] Headings follow hierarchy
+- [ ] Color contrast meets WCAG AA
+- [ ] Keyboard navigation works
+- [ ] Focus indicators visible
+- [ ] ARIA labels where needed
+
+## Development Workflow
+```bash
+# Start development
+npm run dev
+
+# Check code quality
+npm run lint        # All linters
+npm run lint:js     # JavaScript
+npm run lint:css    # CSS
+npm run lint:html   # HTML
+
+# Format code
+npm run format
+
+# Test accessibility
+npm run test:a11y
+
+# Build for production
+npm run build
+```
+
+## Law Office Context
+**Services**:
+- Prawo Rodzinne: rozwody, separacje, alimenty, władza rodzicielska
+- Prawo Spadkowe: spadki, testamenty, działy spadku, zachowek
+- Prawo Cywilne: umowy, windykacja, zniesienie współwłasności
+- Obrona Karna: reprezentacja sądowa, postępowanie wykonawcze
+
+**Target Keywords**:
+- "adwokat Trzebnica"
+- "kancelaria prawna Trzebnica"
+- "rozwód Trzebnica"
+- "spadek Wrocław"
+- "prawo rodzinne Dolny Śląsk"
+
+## Placeholders for Sensitive Data
+Use these placeholders, never real data:
+- `[KANCELARIA_EMAIL]` for email
+- `[KANCELARIA_PHONE]` for phone
+- `[KANCELARIA_ADDRESS]` for address
+- `[KANCELARIA_NIP]` for tax ID
+- `[GOOGLE_ANALYTICS_ID]` for GA tracking
+
+## Windsurf-Specific Features
+- Use "Flow" mode for multi-file edits
+- Reference documentation with @docs
+- Use "Cascade" for complex refactoring
+- Test changes immediately in dev server
+- Leverage real-time preview
+
+## Avoid These Mistakes
+❌ Using TypeScript syntax
+❌ Adding React/Vue components
+❌ Hardcoding secrets
+❌ Ignoring mobile responsiveness
+❌ Skipping accessibility tests
+❌ Using informal language
+❌ Forgetting RODO compliance
+
+## Quality Standards
+- Lighthouse score >90
+- WCAG 2.1 AA compliance
+- Zero linting errors
+- Mobile-friendly
+- Fast load times (<3s)
+- Professional appearance
+
+## Read These First
+1. AGENTS.md - Central guide
+2. docs/RODO.md - GDPR compliance
+3. docs/SEO.md - SEO strategy
+4. docs/ACCESSIBILITY.md - A11y guidelines
+5. CONTRIBUTING.md - Coding standards
+
+---
+**Mission**: Build a trustworthy online presence that helps clients find legal help.
+**Motto**: "Zawsze po Twojej stronie!" (Always on your side!)
